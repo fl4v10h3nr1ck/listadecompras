@@ -198,35 +198,41 @@
 		<div id="erro" style="color:red"  align="center"></div> 
 		<table style="width:100%">
 			<tr>
-				<td  style="width:33%">
-					<label for="quantidade">QTDe:</label><br/>
-					<input style="width:95%;height:45px;font-size: 20px" type='text' id="quantidade" name="quantidade"  maxlength='8' oninput='javascript:mascara(this, formatarSomenteNum)'> 
+				<td  align="center">
+					<label for="quantidade" style="font-size: 40px"><b>QTDe:</b></label><br/>
+					<input style="width:70%;height:55px;font-size: 30px" type='text' id="quantidade" name="quantidade"  maxlength='8' oninput='javascript:mascara(this, formatarSomenteNum)'> 
 				</td>
-				<td style="width:33%">
-					<label for="quantidade">Preço Uni. (R$):</label><br/>
-					<input style="width:95%;height:45px;font-size: 20px" type='text' id='valor' maxlength='8' oninput='javascript:mascara(this, formatarMonetario)'> 
-				</td>
-				<td style="width:33%">
+			</tr>	
+			<tr>	
+				<td align="center">
 					<br/>
-					 <button style="width:95%;height:50px" type="button" onclick="javascript:adicionar()">Adicionar</button> 
+					<label for="quantidade" style="font-size: 40px"><b>Preço Uni. (R$):</b></label><br/>
+					<input style="width:70%;height:55px;font-size: 30px" type='text' id='valor' maxlength='8' oninput='javascript:mascara(this, formatarMonetario)'> 
+				</td>
+			</tr>	
+			<tr>	
+				<td align="center">
+					<br/>
+					 <button style="width:350px;height:60px;font-size: 30px" type="button" onclick="javascript:adicionar()"><b>Adicionar</b></button> 
+					<br/>
 				</td>
 			</tr>
 		</table>
-<br/><br/><br/>		
+<br/><br/><br/><br/><br/>	
 		<table width="100%">
 			<tr>
 				<td  style="width:20%">
 				</td>
 				<td style="width:60%" align="center">
-					<div id="total" style="font-size:40px"></div> 
+					<div id="total" style="font-size:80px"></div> 
 				</td>
 				<td  style="width:20%">
 				</td>
 			</tr>
 		</table>
-<br/><br/><br/>	
+<br/><br/><br/><br/><br/>	
 		<div align="center">
-			<button type="button" style="width:250px;height:50px" onclick="javascript:limpar()">Limpar</button>
+			<button type="button" style="width:350px;height:60px;font-size: 30px" onclick="javascript:limpar()"><b>Limpar</b></button>
 		</div> 
 	</body>
 </html>
