@@ -200,14 +200,14 @@
 			<tr>
 				<td  align="center">
 					<label for="quantidade" style="font-size: 40px"><b>QTDe:</b></label><br/>
-					<input style="width:70%;height:55px;font-size: 30px" type='text' id="quantidade" name="quantidade"  maxlength='8' oninput='javascript:mascara(this, formatarSomenteNum)'> 
+					<input pattern="\d*" inputmode="numeric" style="width:70%;height:55px;font-size: 30px" type='text' id="quantidade" name="quantidade"  maxlength='8' oninput='javascript:mascara(this, formatarSomenteNum)'> 
 				</td>
 			</tr>	
 			<tr>	
 				<td align="center">
 					<br/>
 					<label for="quantidade" style="font-size: 40px"><b>Preço Uni. (R$):</b></label><br/>
-					<input style="width:70%;height:55px;font-size: 30px" type='text' id='valor' maxlength='8' oninput='javascript:mascara(this, formatarMonetario)'> 
+					<input pattern="\d*" inputmode="numeric" style="width:70%;height:55px;font-size: 30px" type='text' id='valor' maxlength='8' oninput='javascript:mascara(this, formatarMonetario)'> 
 				</td>
 			</tr>	
 			<tr>	
