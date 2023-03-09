@@ -38,7 +38,7 @@
 		
 			function setTotal(total){
 			
-				$("#total").html("<b>TOTAL R$: "+formatarMonetario(""+total)+"</b>");
+				$("#total").html("<b>TOTAL R$: "+formatarMonetario(preparaFloat(""+total))+"</b>");
 			}
 		
 		
@@ -74,6 +74,9 @@
 				setTotal(total);
 				
 				localStorage.setItem('total', ""+total);
+				
+				$("#quantidade").val("");
+				$("#valor").val("");
 			}
 			
 			
@@ -134,6 +137,29 @@
 			return valor;
 			}
 			
+	
+			function preparaFloat(valor){
+				
+				valor = valor.replace(",", ".");
+		
+				if(valor.indexOf(".")<0)
+					valor = valor+".00";
+				
+				if(valor.indexOf(".")==0)
+					valor = "0"+valor;
+				
+				if((valor.length - valor.indexOf("."))==1)
+					valor = valor+"00";
+		
+				if((valor.length - valor.indexOf("."))==2)
+					valor = valor+"0";
+		
+				if((valor.length - valor.indexOf("."))>3)
+					valor = valor.substring(0, valor.indexOf(".")+3);
+					
+				return valor;
+			}
+	
 	
 	
 			function formatarMonetario(valor){
